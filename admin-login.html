@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Administrator Login - Iyunga Technical Secondary School">
+
+    <meta name="author"
+          content="Iyunga Technical Secondary School">
+
+    <title>
+        Admin Login | Iyunga Technical Secondary School
+    </title>
+
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+</head>
+
+
+<body class="admin-login-page">
+
+
+    <!-- =====================================================
+         ADMIN LOGIN
+    ====================================================== -->
+
+    <main class="admin-login-container">
+
+
+        <div class="admin-login-card">
+
+
+            <!-- LOGO -->
+
+            <div class="admin-login-logo">
+
+                <img
+                    src="assets/images/logo.png"
+                    alt="Iyunga Technical Secondary School Logo">
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <div class="admin-login-header">
+
+                <h1>
+                    Administrator Login
+                </h1>
+
+                <p>
+                    Iyunga Technical Secondary School
+                </p>
+
+            </div>
+
+
+            <!-- LOGIN FORM -->
+
+            <form id="adminLoginForm">
+
+
+                <!-- USERNAME -->
+
+                <div class="form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter administrator username"
+                        autocomplete="username"
+                        required>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter administrator password"
+                        autocomplete="current-password"
+                        required>
+
+                </div>
+
+
+                <!-- SHOW PASSWORD -->
+
+                <div class="show-password">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="showPassword">
+
+                        Show Password
+
+                    </label>
+
+                </div>
+
+
+                <!-- ERROR MESSAGE -->
+
+                <div
+                    id="loginMessage"
+                    class="admin-login-message"
+                    role="alert"
+                    aria-live="polite">
+
+                </div>
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="btn btn-primary admin-login-button">
+
+                    Login
+
+                </button>
+
+
+            </form>
+
+
+            <!-- BACK TO WEBSITE -->
+
+            <div class="admin-login-footer">
+
+                <a href="index.html">
+                    ← Back to School Website
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        /* =================================================
+           LOGIN FORM
+        ================================================= */
+
+        const adminLoginForm =
+            document.getElementById("adminLoginForm");
+
+        const loginMessage =
+            document.getElementById("loginMessage");
+
+        const showPassword =
+            document.getElementById("showPassword");
+
+        const password =
+            document.getElementById("password");
+
+
+
+        /* =================================================
+           SHOW / HIDE PASSWORD
+        ================================================= */
+
+        showPassword.addEventListener(
+            "change",
+            function () {
+
+                if (showPassword.checked) {
+
+                    password.type = "text";
+
+                } else {
+
+                    password.type = "password";
+
+                }
+
+            }
+        );
+
+
+
+        /* =================================================
+           ADMIN LOGIN
+        ================================================= */
+
+        adminLoginForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const username =
+                    document.getElementById("username")
+                    .value
+                    .trim();
+
+                const passwordValue =
+                    document.getElementById("password")
+                    .value;
+
+
+                /* CLEAR PREVIOUS MESSAGE */
+
+                loginMessage.style.display = "none";
+
+                loginMessage.textContent = "";
+
+
+                /* VALIDATION */
+
+                if (
+                    username === "" ||
+                    passwordValue === ""
+                ) {
+
+                    showLoginMessage(
+                        "Please enter both username and password.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                /*
+                 * TEMPORARY ADMIN LOGIN
+                 *
+                 * We will later connect this
+                 * to Spring Boot + MySQL.
+                 */
+
+                const adminUsername = "admin";
+
+                const adminPassword = "admin123";
+
+
+                /* CHECK LOGIN */
+
+                if (
+                    username === adminUsername &&
+                    passwordValue === adminPassword
+                ) {
+
+
+                    /*
+                     * SAVE LOGIN SESSION
+                     */
+
+                    sessionStorage.setItem(
+                        "adminLoggedIn",
+                        "true"
+                    );
+
+
+                    sessionStorage.setItem(
+                        "adminUsername",
+                        username
+                    );
+
+
+                    /* SUCCESS */
+
+                    showLoginMessage(
+                        "Login successful. Opening dashboard...",
+                        "success"
+                    );
+
+
+                    /*
+                     * REDIRECT TO ADMIN DASHBOARD
+                     */
+
+                    setTimeout(
+                        function () {
+
+                            window.location.href =
+                                "admin.html";
+
+                        },
+                        800
+                    );
+
+
+                } else {
+
+
+                    /* INVALID LOGIN */
+
+                    showLoginMessage(
+                        "Invalid username or password.",
+                        "error"
+                    );
+
+
+                    password.value = "";
+
+                }
+
+            }
+        );
+
+
+
+        /* =================================================
+           SHOW LOGIN MESSAGE
+        ================================================= */
+
+        function showLoginMessage(
+            message,
+            type
+        ) {
+
+            loginMessage.style.display = "block";
+
+            loginMessage.textContent = message;
+
+            loginMessage.className =
+                "admin-login-message " + type;
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
