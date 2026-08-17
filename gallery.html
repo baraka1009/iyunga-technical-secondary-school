@@ -1,84 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Gallery of Iyunga Technical Secondary School, Mbeya, Tanzania.">
+          content="Gallery of Iyunga Technical Secondary School, Mbeya, Tanzania. View school activities, students, sports, classrooms and practical learning facilities.">
 
-    <title>
-        Gallery | Iyunga Technical Secondary School
-    </title>
+    <meta name="keywords"
+          content="Iyunga Technical Secondary School, Iyunga Technical, school gallery, Mbeya Tanzania">
 
-    <link rel="stylesheet"
-          href="assets/css/style.css">
+    <meta name="author"
+          content="Iyunga Technical Secondary School">
 
+    <title>Gallery | Iyunga Technical Secondary School</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body>
 
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-<header class="header">
+<header class="site-header">
 
     <div class="container header-container">
 
-        <a href="index.html"
-           class="logo">
+        <!-- School Logo / Name -->
+        <div class="logo">
 
-            <img src="assets/images/logo.png"
-                 alt="Iyunga Technical Secondary School Logo">
-
-            <div class="logo-text">
+            <a href="index.html">
 
                 <h1>Iyunga Technical</h1>
+                <span>Secondary School</span>
 
-                <p>Secondary School</p>
-
-            </div>
-
-        </a>
-
-
-        <button class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-expanded="false">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-
-        <nav class="navbar"
-             id="navbar">
-
-            <a href="index.html">Home</a>
-
-            <a href="about.html">About Us</a>
-
-            <a href="academics.html">Academics</a>
-
-            <a href="admissions.html">Admissions</a>
-
-            <a href="teachers.html">Teachers</a>
-
-            <a href="news.html">News</a>
-
-            <a href="events.html">Events</a>
-
-            <a href="gallery.html"
-               class="active">
-                Gallery
             </a>
 
-            <a href="contact.html">Contact</a>
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="academics.html">Academics</a>
+                </li>
+
+                <li>
+                    <a href="admissions.html">Admissions</a>
+                </li>
+
+                <li>
+                    <a href="teachers.html">Teachers</a>
+                </li>
+
+                <li>
+                    <a href="news.html">News</a>
+                </li>
+
+                <li>
+                    <a href="events.html">Events</a>
+                </li>
+
+                <li>
+                    <a href="gallery.html" class="active">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
 
         </nav>
 
@@ -87,21 +96,19 @@
 </header>
 
 
-<section class="hero">
+<!-- =========================================================
+     PAGE HERO
+========================================================= -->
 
-    <div class="hero-content">
+<section class="page-hero">
 
-        <p class="hero-small-title">
-            SCHOOL PHOTOS
-        </p>
+    <div class="container">
 
-        <h1>
-            Our Gallery
-        </h1>
+        <h2>School Gallery</h2>
 
         <p>
-            Explore the school environment, students,
-            sports and practical learning activities.
+            Explore memorable moments, activities and learning
+            environments at Iyunga Technical Secondary School.
         </p>
 
     </div>
@@ -109,41 +116,55 @@
 </section>
 
 
-<section class="academics">
+<!-- =========================================================
+     GALLERY SECTION
+========================================================= -->
+
+<section class="gallery-section">
 
     <div class="container">
 
-        <div class="section-title">
+        <div class="section-heading">
 
-            <h2>
-                School Gallery
-            </h2>
+            <h2>Our Gallery</h2>
 
             <p>
-                A visual look at life and activities
-                at Iyunga Technical Secondary School.
+                A collection of images showcasing our school,
+                students, sports, classrooms and practical learning
+                activities.
             </p>
 
         </div>
 
+
+        <!-- =====================================================
+             GALLERY GRID
+        ====================================================== -->
 
         <div class="gallery-grid">
 
 
+            <!-- School -->
             <div class="gallery-item">
 
-                <img src="assets/images/school.jpg"
-                     alt="Iyunga Technical Secondary School">
+                <a href="assets/images/school.jpg"
+                   target="_blank"
+                   rel="noopener">
+
+                    <img
+                        src="assets/images/school.jpg"
+                        alt="Iyunga Technical Secondary School"
+                        loading="lazy"
+                    >
+
+                </a>
 
                 <div class="gallery-caption">
 
-                    <h3>
-                        Our School
-                    </h3>
+                    <h3>Our School</h3>
 
                     <p>
-                        Iyunga Technical Secondary School
-                        environment.
+                        Iyunga Technical Secondary School campus.
                     </p>
 
                 </div>
@@ -151,20 +172,28 @@
             </div>
 
 
+            <!-- Students -->
             <div class="gallery-item">
 
-                <img src="assets/images/students.jpg"
-                     alt="Iyunga students">
+                <a href="assets/images/students.jpg"
+                   target="_blank"
+                   rel="noopener">
+
+                    <img
+                        src="assets/images/students.jpg"
+                        alt="Students of Iyunga Technical Secondary School"
+                        loading="lazy"
+                    >
+
+                </a>
 
                 <div class="gallery-caption">
 
-                    <h3>
-                        Students
-                    </h3>
+                    <h3>Our Students</h3>
 
                     <p>
-                        Students participating in
-                        school activities.
+                        Students participating in school activities
+                        and academic life.
                     </p>
 
                 </div>
@@ -172,19 +201,28 @@
             </div>
 
 
+            <!-- Sports -->
             <div class="gallery-item">
 
-                <img src="assets/images/sports.jpg"
-                     alt="School sports">
+                <a href="assets/images/sports.jpg"
+                   target="_blank"
+                   rel="noopener">
+
+                    <img
+                        src="assets/images/sports.jpg"
+                        alt="Sports activities at Iyunga Technical Secondary School"
+                        loading="lazy"
+                    >
+
+                </a>
 
                 <div class="gallery-caption">
 
-                    <h3>
-                        Sports
-                    </h3>
+                    <h3>Sports Activities</h3>
 
                     <p>
-                        Sports and physical activities.
+                        Students participating in sports and
+                        recreational activities.
                     </p>
 
                 </div>
@@ -192,19 +230,28 @@
             </div>
 
 
+            <!-- Teachers -->
             <div class="gallery-item">
 
-                <img src="assets/images/laboratory.jpg"
-                     alt="School laboratory">
+                <a href="assets/images/teachers.jpg"
+                   target="_blank"
+                   rel="noopener">
+
+                    <img
+                        src="assets/images/teachers.jpg"
+                        alt="Teachers at Iyunga Technical Secondary School"
+                        loading="lazy"
+                    >
+
+                </a>
 
                 <div class="gallery-caption">
 
-                    <h3>
-                        Laboratory
-                    </h3>
+                    <h3>Our Teachers</h3>
 
                     <p>
-                        Scientific practical learning.
+                        Dedicated teachers supporting academic
+                        excellence and student development.
                     </p>
 
                 </div>
@@ -212,19 +259,28 @@
             </div>
 
 
+            <!-- Classroom -->
             <div class="gallery-item">
 
-                <img src="assets/images/students.jpg"
-                     alt="Student learning">
+                <a href="assets/images/classroom.png"
+                   target="_blank"
+                   rel="noopener">
+
+                    <img
+                        src="assets/images/classroom.png"
+                        alt="Classroom at Iyunga Technical Secondary School"
+                        loading="lazy"
+                    >
+
+                </a>
 
                 <div class="gallery-caption">
 
-                    <h3>
-                        Learning
-                    </h3>
+                    <h3>Classroom Learning</h3>
 
                     <p>
-                        Academic and student development.
+                        Students engaging in classroom learning
+                        activities.
                     </p>
 
                 </div>
@@ -232,19 +288,28 @@
             </div>
 
 
+            <!-- Laboratory -->
             <div class="gallery-item">
 
-                <img src="assets/images/school.jpg"
-                     alt="School environment">
+                <a href="assets/images/laboratory.jpg"
+                   target="_blank"
+                   rel="noopener">
+
+                    <img
+                        src="assets/images/laboratory.jpg"
+                        alt="Laboratory at Iyunga Technical Secondary School"
+                        loading="lazy"
+                    >
+
+                </a>
 
                 <div class="gallery-caption">
 
-                    <h3>
-                        School Environment
-                    </h3>
+                    <h3>Practical Learning</h3>
 
                     <p>
-                        A supportive environment for learning.
+                        Practical learning and laboratory activities
+                        at the school.
                     </p>
 
                 </div>
@@ -259,247 +324,134 @@
 </section>
 
 
-<section class="why-us">
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
-    <div class="container">
+<footer class="site-footer">
 
-        <div class="section-title">
+    <div class="container footer-container">
 
-            <h2>
-                Life at Iyunga
-            </h2>
+
+        <!-- School Information -->
+        <div class="footer-column">
+
+            <h3>Iyunga Technical Secondary School</h3>
 
             <p>
-                Education goes beyond the classroom.
+                A government-run boys' technical secondary school
+                located in Utulivu, Iwambi Ward, Mbeya City,
+                Tanzania.
             </p>
 
         </div>
 
 
-        <div class="why-cards">
+        <!-- Quick Links -->
+        <div class="footer-column">
 
+            <h3>Quick Links</h3>
 
-            <div class="why-card">
+            <ul>
 
-                <h3>
-                    Academic Life
-                </h3>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
 
-                <p>
-                    Students participate in classroom
-                    and academic activities.
-                </p>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
 
-            </div>
+                <li>
+                    <a href="academics.html">Academics</a>
+                </li>
 
+                <li>
+                    <a href="admissions.html">Admissions</a>
+                </li>
 
-            <div class="why-card">
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
 
-                <h3>
-                    Practical Learning
-                </h3>
-
-                <p>
-                    Students gain experience through
-                    scientific and technical activities.
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <h3>
-                    Sports
-                </h3>
-
-                <p>
-                    Sports help students develop
-                    teamwork and discipline.
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <h3>
-                    Student Development
-                </h3>
-
-                <p>
-                    Students develop leadership,
-                    responsibility and confidence.
-                </p>
-
-            </div>
+            </ul>
 
         </div>
 
+
+        <!-- Contact Information -->
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <strong>Location:</strong><br>
+                Mbeya, Tanzania
+            </p>
+
+            <p>
+                <strong>Phone:</strong><br>
+                +255 25 250 2024
+            </p>
+
+            <p>
+                <strong>NECTA Centre Number:</strong><br>
+                S0112
+            </p>
+
+        </div>
+
+
     </div>
 
-</section>
 
-
-<section class="cta">
-
-    <div class="container">
-
-        <h2>
-            Explore More About Our School
-        </h2>
+    <!-- Copyright -->
+    <div class="footer-bottom">
 
         <p>
-            Learn more about our academic programs,
-            teachers and admission opportunities.
+            &copy;
+            <span id="currentYear"></span>
+            Iyunga Technical Secondary School.
+            All Rights Reserved.
         </p>
-
-        <div class="hero-buttons">
-
-            <a href="academics.html"
-               class="btn btn-secondary">
-                Academics
-            </a>
-
-            <a href="admissions.html"
-               class="btn btn-primary">
-                Admissions
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<footer class="footer">
-
-    <div class="container">
-
-        <div class="footer-content">
-
-
-            <div class="footer-column">
-
-                <div class="footer-logo">
-
-                    <img src="assets/images/logo.png"
-                         alt="School Logo">
-
-                    <h3>
-                        Iyunga Technical
-                    </h3>
-
-                </div>
-
-                <p>
-                    Iyunga Technical Secondary School
-                </p>
-
-                <p>
-                    Blending science, technical skills
-                    and vocational training.
-                </p>
-
-                <p>
-                    Mbeya, Tanzania
-                </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>Quick Links</h3>
-
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="academics.html">Academics</a>
-                <a href="admissions.html">Admissions</a>
-                <a href="teachers.html">Teachers</a>
-                <a href="news.html">News</a>
-                <a href="events.html">Events</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>Contact Us</h3>
-
-                <p>
-                    Iwambi, Mbeya, Tanzania
-                </p>
-
-                <p>
-                    Phone: +255 25 250 2024
-                </p>
-
-                <p>
-                    Centre Number: S0112
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <p>
-                &copy; 2026 Iyunga Technical Secondary School.
-                All Rights Reserved.
-            </p>
-
-        </div>
 
     </div>
 
 </footer>
 
 
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
 <script>
 
-const menuToggle =
-    document.getElementById("menuToggle");
-
-const navbar =
-    document.getElementById("navbar");
-
-
-menuToggle.addEventListener("click", function () {
-
-    navbar.classList.toggle("show");
-
-    menuToggle.classList.toggle("active");
-
-    menuToggle.setAttribute(
-        "aria-expanded",
-        navbar.classList.contains("show")
-    );
-
-});
+    /*
+     * Automatically display the current year
+     */
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
 
 
-document.querySelectorAll(".navbar a")
-    .forEach(function(link) {
+    /*
+     * Highlight the current navigation page
+     */
+    const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
 
-        link.addEventListener("click", function() {
+    const navigationLinks =
+        document.querySelectorAll(".main-nav a");
 
-            navbar.classList.remove("show");
+    navigationLinks.forEach(function(link) {
 
-            menuToggle.classList.remove("active");
+        const linkPage =
+            link.getAttribute("href");
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
+        if (linkPage === currentPage) {
 
-        });
+            link.classList.add("active");
+
+        }
 
     });
 
